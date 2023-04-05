@@ -49,8 +49,8 @@ submitButton.addEventListener('click', () => {
 				}
 			})
 			list.appendChild(li)
-			titleInputBox.textContent = ''
-			descInputBox.textContent = ''
+			titleInputBox.value = ''
+			descInputBox.value = ''
 		})
 })
 

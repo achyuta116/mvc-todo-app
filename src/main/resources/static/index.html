@@ -5,13 +5,80 @@
     <title>sldfjsld</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        input, button {
+            width: 110px;
+            padding: 10px;
+            margin: 8px;
+            border: solid 0px black;
+            border-bottom: solid 1px black;
+        }
+
+        button {
+            width: 110px;
+            padding: 10px;
+            margin: 8px;
+            margin-bottom: 10px;
+            background: white;
+            color: turquoise;
+            font-weight: 500;
+            border-radius: 25px;
+            border: 2px solid turquoise;
+            margin-bottom: 10px;
+        }
+
+        #outer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: grid;
+            place-items: center;
+            gap: 10px;
+        }
+
+        .todo {
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid turquoise;
+        }
+
+        ul>li>div {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        ul>li>div:first-child {
+            font-weight: 500;
+            font-size: larger;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="text" id="description" />
-    <input type="text" id="title" />
-    <button id="submit">Create Item</button>
-    <ul id="list"></ul>
+    <h2>MVC Todo Application</h2>
+    <div id="outer">
+        <div class="inner">
+        <input type="text" id="title" placeholder="Enter Title"/>
+        <input type="text" id="description" placeholder="Enter Description"/>
+        </div>
+        <button id="submit">Create Item</button>
+        <ul id="list"></ul>
+    </div>
     <script src="index.js"></script>
 </body>
 
