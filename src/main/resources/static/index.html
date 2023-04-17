@@ -2,40 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>sldfjsld</title>
+    <title>MVC Todo Application</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         * {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
+            font-family: 'Nunito', sans-serif;
         }
 
-        h2 {
+        h1 {
             text-align: center;
             margin: 15px 0;
+            padding-bottom: 5px;
         }
 
-        input, button {
-            width: 110px;
-            padding: 10px;
-            margin: 8px;
-            border: solid 0px black;
-            border-bottom: solid 1px black;
+        input {
+            width: 300px;
+            display: block;
+            border: none;
+            height: 30px;
+            font-size: large;
+            margin: 17px;
+            cursor: pointer;
+            border-bottom: 2px solid #0077b6;
+            outline: none;
         }
 
         button {
             width: 110px;
             padding: 10px;
-            margin: 8px;
-            margin-bottom: 10px;
             background: white;
-            color: turquoise;
+            color: #0077b6;
             font-weight: 500;
             border-radius: 25px;
-            border: 2px solid turquoise;
-            margin-bottom: 10px;
+            border: 2px solid #0077b6;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all ease 0.3s;
+        }
+
+        button:hover {
+            color: white;
+            background: #0077b6;
         }
 
         #outer {
@@ -53,28 +64,43 @@
 
         .todo {
             padding: 8px;
-            border-radius: 12px;
-            border: 1px solid turquoise;
+            height: 70px;
+            width: 300px;
+            margin: 4px auto;
+            transition: all ease 0.3s;
+            border: black 1px solid;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo:hover {
+            scale: 105%;
+            box-shadow: 4px 4px 3px #0077b6b0;
         }
 
         ul>li>div {
-            display: inline-block;
             padding: 0 10px;
+            margin: 5px 0;
+            height: 20px
         }
 
         ul>li>div:first-child {
-            font-weight: 500;
-            font-size: larger;
+            font-weight: bold;
+            font-size: smaller;
+        }
+
+        ul>li>div:nth-child(2) {
+            overflow: scroll;
         }
     </style>
 </head>
 
 <body>
-    <h2>MVC Todo Application</h2>
+    <h1>MVC Todo Application</h1>
     <div id="outer">
         <div class="inner">
-        <input type="text" id="title" placeholder="Enter Title"/>
-        <input type="text" id="description" placeholder="Enter Description"/>
+            <input type="text" id="title" placeholder="Enter Title"/>
+            <input type="text" id="description" placeholder="Enter Description"/>
         </div>
         <button id="submit">Create Item</button>
         <ul id="list"></ul>
